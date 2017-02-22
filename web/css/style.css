@@ -1,0 +1,78 @@
+body{
+
+	background-image: url("../img/dark-mosaic.png");
+	background-color: black;
+	font-family: 'Gloria Hallelujah';
+
+}
+
+#main{
+
+	height: 500px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header{
+
+	width: 100%;
+	height: 40px;
+	background-color:  #3B5998;
+	text-align: center;
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+#square{
+
+	width:600px;
+	height: 450px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+#center{
+
+	margin-left: 22%;
+
+}
+.letter{
+
+	margin-right: 30px;
+	width: 60px;
+	float: left;
+
+}
+
+ul{
+
+	list-style-type: none;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	margin-top: -50px;
+}
+
+.letter:hover>ul{
+	color: #3B5998;
+	display: block;
+}
+.letter:hover{
+	color: #3B5998;
+
+}
+ul>li{
+
+	height: 65px;
+
+}
+
+a{
+	color: white;
+}

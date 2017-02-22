@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div id="main">
+    {% block header %}
+
+        <div id="header">
+            <a href="{{ asset('/')}}">Start</a>
+            <a href="" >Database config</a>
+            <a href="">Logs</a>
+
+        </div>
+
+    {% endblock %}
+
+
+    <div id="square">
+        <div id="center">
+
+            <a href="{{ asset('/create')}}" ><div class="letter">C.
+                    <ul>
+                        <li>R</li>
+                        <li>E</li>
+                        <li>A</li>
+                        <li>T</li>
+                        <li>E</li>
+                    </ul>
+                </div></a>
+            <a href="{{ asset('/read')}}" ><div class="letter">R.
+                    <ul>
+                        <li>E</li>
+                        <li>A</li>
+                        <li>D</li>
+                    </ul>
+                </div></a>
+            <a href="{{ asset('/update')}}" ><div class="letter">U.
+                    <ul>
+                        <li>P</li>
+                        <li>D</li>
+                        <li>A</li>
+                        <li>T</li>
+                        <li>E</li>
+                    </ul>
+                </div></a>
+            <a href="{{ asset('/delete')}}" ><div class="letter">D.
+                    <ul>
+                        <li>E</li>
+                        <li>L</li>
+                        <li>E</li>
+                        <li>T</li>
+                        <li>E</li>
+                    </ul>
+                </div></a>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

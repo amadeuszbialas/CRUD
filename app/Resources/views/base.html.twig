@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    {% endblock %}
+    <title>{% block title %} C.R.U.D. {% endblock %}</title>
+</head>
+<body>
+
+
+{% block body %}
+    {% block header %}{% endblock %}
+
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+
+</body>
