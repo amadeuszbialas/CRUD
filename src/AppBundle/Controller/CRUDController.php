@@ -16,6 +16,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class CRUDController extends Controller
 {
+    public function db_config(){
+
+
+    }
     /**
      * @Route("/", name="menu_site")
      */
