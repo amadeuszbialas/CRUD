@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+    {% block messages %}
+        {%  for msg in app.session.flashBag.get('succes') %}
+            {{ msg }}
+        {% endfor %}
+    {% endblock %}
+
+{% block body %}
+
+    <div id="center_div">
+        <h2>Delete a row:</h2><br>
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% for crud in showCrud %}
+                <tr>
+                    <td>{{ crud.id }}</td>
+                    <td>{{ crud.column1 }}</td>
+                    <td>{{ crud.column2 }}</td>
+                    <td>{{ crud.column3 }}</td>
+                    <td>{{ crud.column4 }}</td>
+                    <td><a href="/delete/{{ crud.id }}" class="btn btn-danger">Delete</a></td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+{% endblock %}

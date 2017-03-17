@@ -1,20 +1,43 @@
 {% extends 'base.html.twig' %}
 
+    {% block messages %}
+           {%  for msg in app.session.flashBag.get('succes') %}
+               {{ msg }}
+           {% endfor %}
+
+    {% endblock %}
+
 {% block body %}
+        <div id="center_div">
+                <table class="table">
 
-    <div id="main">
-        {% block header %}
+                        <thead>
+                                <tr>
+                                        <th>Id</th>
+                                        <th>Column 1</th>
+                                        <th>Column 2</th>
+                                        <th>Column 3</th>
+                                        <th>Column 4</th>
+                                </tr>
+                        </thead>
+                        <tbody>
 
-            <div id="header">
-                <a href="{{ asset('/')}}">Start</a>
-                <a href="" >Database config</a>
-                <a href="">Logs</a>
+                                {% for crud in showCrud %}
+                                <tr>
+                                         <td>{{ crud.id }}</td>
+                                         <td>{{ crud.column1 }}</td>
+                                         <td>{{ crud.column2 }}</td>
+                                         <td>{{ crud.column3 }}</td>
+                                         <td>{{ crud.column4 }}</td>
+                                </tr>
+                                {% endfor %}
 
-            </div>
+                        </tbody>
 
-        {% endblock %}
 
-        READ
-    </div>
+                </table>
+
+
+        </div>
 
 {% endblock %}

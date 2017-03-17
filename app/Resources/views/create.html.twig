@@ -2,19 +2,17 @@
 
 {% block body %}
 
-    <div id="main">
-        {% block header %}
+    <div id="center_div">
 
-            <div id="header">
-                <a href="{{ asset('/')}}">Start</a>
-                <a href="" >Database config</a>
-                <a href="">Logs</a>
 
-            </div>
+                 <h2>Add a row:</h2>
 
-        {% endblock %}
+                {{ form_start(CrudForm) }}
+                {{ form_widget(CrudForm) }}
+                <button type="submit" class="btn btn-warning">Add row</button>
+                {{ form_end(CrudForm) }}
 
-    CREATE
+
     </div>
 
 {% endblock %}

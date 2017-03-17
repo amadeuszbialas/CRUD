@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    {% endblock %}
-    <title>{% block title %} C.R.U.D. {% endblock %}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        {% block stylesheets %}
+
+            <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
+            <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+
+        {% endblock %}
+
+        <title>{% block title %} C.R.U.D. {% endblock %}</title>
 </head>
 <body>
 
+        <div id="header">
+                <a href="{{ asset('/start')}}">Start</a>
+               <span class="space_menu"> <a href="{{ asset('/config_database') }}" >Database config</a></span>
+        </div>
+        <div id="messages">
+            {% block messages %}
+            {% endblock %}
+        </div>
+
 
 {% block body %}
-    {% block header %}{% endblock %}
 
 {% endblock %}
 
