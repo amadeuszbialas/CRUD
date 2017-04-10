@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: root
- * Date: 22.02.17
- * Time: 15:20
- */
+
 
 namespace AppBundle\Controller;
 
@@ -16,11 +11,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Configuration;
 use Symfony\Component\Yaml\Yaml;
-
-
-
-
-
 
 class CRUDController extends Controller
 {
